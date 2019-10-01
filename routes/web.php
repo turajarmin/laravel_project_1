@@ -26,5 +26,7 @@ Route::middleware('isAdmin:writer')->prefix('Administrator')->group(function (){
        $user=Auth::user();
    })->name('Admin.Slider');
     Route::resource('/Post','PostController');
-
+    Route::get('/Contact',function(){
+       return 'contact';
+    });
 });
